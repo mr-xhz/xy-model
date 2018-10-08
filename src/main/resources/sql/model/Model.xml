@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- "namespace" must be the path of interface, or show error “is not known to the MapperRegistry” when launch -->
+<mapper namespace="com.xy.model.interfaces.BaseModelDao">
+	
+	<select id="select" resultType="HashMap" useCache="false">
+		<![CDATA[ ${paramSQL} ]]>	
+	</select>	
+	
+	<insert id="insert" flushCache="true">
+		<![CDATA[ ${paramSQL} ]]>	
+	</insert>
+	
+	<update id="update" flushCache="true">
+		<![CDATA[ ${paramSQL} ]]>	
+	</update>
+	
+	<delete id="delete" flushCache="true">
+		<![CDATA[ ${paramSQL} ]]>	
+	</delete>
+</mapper>
